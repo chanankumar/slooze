@@ -11,6 +11,7 @@ export class OverviewBarChartsComponent implements AfterViewInit{
   @Input({required : true}) setSize!:number;
   @Input({required : true}) maxValue!:number;
   @Input({required : true}) labelNeeded!:boolean;
+  @Input({required : true}) stack!:boolean;
   @Input({required : true}) barChartData!: ChartData<'bar'>;
   
   public barChartOptions!: ChartOptions<'bar'>;
@@ -49,33 +50,24 @@ export class OverviewBarChartsComponent implements AfterViewInit{
 
   assignValue() {
       this.barChartOptions = {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+    },
+    scales: {
+      x: {
+        stacked: this.stack,
+        grid: { display: false },
+      },
+      y: {
+        stacked: this.stack,
+        beginAtZero: true,
+        grid: { display: false },
+        ticks: {
+          stepSize: 100,
         },
       },
-      scales: {
-        x: {
-          grid: {
-            display: false,
-          },
-          ticks: {
-            display : this.labelNeeded,
-          },
-        },
-        y: {
-          beginAtZero: true,
-          max: this.maxValue,
-          ticks: {
-            display : this.labelNeeded,
-            stepSize: this.setSize
-          },
-          grid: {
-            display: false
-          }
-        }
-      }
+    },
     };
   }
   

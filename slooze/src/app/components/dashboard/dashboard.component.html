@@ -26,7 +26,7 @@
   <div class="row two-cols">
     <div class="tile">
       <div class="title">Overview</div>
-      <app-overview-bar-charts [setSize]="constants.OVERVIEW_CHART_STEPSIZE" [maxValue]="constants.OVERVIEW_CHART_MAX_Y" [labelNeeded]="true" [barChartData]="constants.OVERVIEW_CHART_DATA"></app-overview-bar-charts>
+      <app-overview-bar-charts [stack]="false" [setSize]="constants.OVERVIEW_CHART_STEPSIZE" [maxValue]="constants.OVERVIEW_CHART_MAX_Y" [labelNeeded]="true" [barChartData]="constants.OVERVIEW_CHART_DATA"></app-overview-bar-charts>
     </div>
     <div class="tile"><app-sales-list></app-sales-list></div>
   </div>
@@ -37,13 +37,13 @@
 </app-line-charts>
 </div>
     <div class="tile width-50">
-      <app-overview-bar-charts [setSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
+      <app-overview-bar-charts [stack]="false" [setSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
     </div>
   </div>
 
   <!-- Row 5 -->
   <div class="row two-cols">
-    <div class="tile">Row 5 - Tile 1</div>
+    <div class="tile"><app-overview-bar-charts [stack]="true" [setSize]="100" [maxValue]="500" [barChartData]="constants.TOTAL_EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts></div>
     <div class="tile">Row 5 - Tile 2</div>
   </div>
 
