@@ -1,0 +1,12 @@
+<div class="sales-container">
+  <h2>Recent Sales</h2>
+  <p class="subheading">You made {{ salesCount }} sales this mount</p>
+  <div class="sale-item" *ngFor="let sale of sales">
+    <div class="avatar"></div>
+    <div class="info">
+      <strong>{{ sale.name }}</strong>
+      <div class="email">{{ sale.email }}</div>
+    </div>
+    <div class="amount">+${{ sale.amount.toFixed(2) }}</div>
+  </div>
+</div>  

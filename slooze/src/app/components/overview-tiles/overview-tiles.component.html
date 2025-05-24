@@ -1,0 +1,17 @@
+<div class="tile-card">
+  <div class="tile-header">
+    <span>{{ title }}</span>
+    <button class="icon-button" aria-label="details">
+    <i class="fa-solid fa-square-poll-vertical"></i>
+    </button>
+  </div>
+
+  <div class="tile-amount">
+    $ {{ amount | numberFormat}}
+  </div>
+
+  <div class="tile-trend" [class.positive]="trendPositive" [class.negative]="!trendPositive">
+    {{ trendTitle }}
+    <span class="percent"> {{ trendPositive ? '▲' : '▼' }} {{ trendPercent }}%</span>
+  </div>
+</div>

@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { OverviewTilesComponent } from './components/overview-tiles/overview-tiles.component';
+import { NumberFormatPipe } from './pipes/number-format.pipe';
+import { OverviewBarChartsComponent } from './components/overview-bar-charts/overview-bar-charts.component';
+import { SalesListComponent } from './components/sales-list/sales-list.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HomeComponent,
     HeaderComponent,
     SidebarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-  ],  
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,10 @@
+/* Full container background gradient to match the image */
+:host {
+  display: block;
+  padding: 20px;
+  background: linear-gradient(to top, #e6ecf2 30%, white 100%);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  max-width: 850px;
+  margin: auto;
+}
