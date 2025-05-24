@@ -7,6 +7,7 @@ import { NumberFormatPipe } from 'src/app/pipes/number-format.pipe';
 import { OverviewBarChartsComponent } from '../overview-bar-charts/overview-bar-charts.component';
 import { NgChartsModule } from 'ng2-charts';
 import { SalesListComponent } from '../sales-list/sales-list.component';
+import { LineChartsComponent } from '../line-charts/line-charts.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SalesListComponent } from '../sales-list/sales-list.component';
     NumberFormatPipe,
     OverviewBarChartsComponent,
     SalesListComponent,
+    LineChartsComponent
   ],
   imports: [
     HomeRoutingModule,
