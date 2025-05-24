@@ -6,8 +6,12 @@
     </button>
   </div>
 
-  <div class="tile-amount">
+  <div class="tile-amount" *ngIf = "amountValue === true">
     $ {{ amount | numberFormat}}
+  </div>
+
+  <div class="tile-amount" *ngIf = "amountValue === false">
+    + {{ amount | subscriberFormat}}
   </div>
 
   <div class="tile-trend" [class.positive]="trendPositive" [class.negative]="!trendPositive">

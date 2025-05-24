@@ -8,24 +8,37 @@
 
   <!-- Row 2 -->
   <div class="row four-cols">
-    <div class="tile"><app-overview-tiles></app-overview-tiles></div>
-    <div class="tile">Tile 2</div>
-    <div class="tile">Tile 3</div>
-    <div class="tile">Tile 4</div>
+    <div class="tile">
+      <app-overview-tiles title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true"></app-overview-tiles>
+    </div>
+    <div class="tile">
+      <app-overview-tiles title="Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+    </div>
+    <div class="tile">
+      <app-overview-tiles title="Total Sales" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+    </div>
+    <div class="tile">
+      <app-overview-tiles title="Subscription" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+    </div>
   </div>
 
   <!-- Row 3 -->
   <div class="row two-cols">
-    <div class="tile"><app-overview-bar-charts></app-overview-bar-charts></div>
+    <div class="tile">
+      <div class="title">Overview</div>
+      <app-overview-bar-charts [setSize]="constants.OVERVIEW_CHART_STEPSIZE" [maxValue]="constants.OVERVIEW_CHART_MAX_Y" [labelNeeded]="true" [barChartData]="constants.OVERVIEW_CHART_DATA"></app-overview-bar-charts>
+    </div>
     <div class="tile"><app-sales-list></app-sales-list></div>
   </div>
 
   <!-- Row 4 -->
-  <div class="row two-cols">
-    <div class="tile"><app-line-charts>
+  <div class="row two-cols nowrap">
+    <div class="tile width-50"><app-line-charts>
 </app-line-charts>
 </div>
-    <div class="tile">Row 4 - Right</div>
+    <div class="tile width-50">
+      <app-overview-bar-charts [setSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
+    </div>
   </div>
 
   <!-- Row 5 -->

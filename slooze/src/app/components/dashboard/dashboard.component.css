@@ -26,7 +26,11 @@
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left;
+  .title {
+    margin: 1rem;
+    font-weight: 700;
+  }
 }
 
 .footer {
@@ -35,4 +39,12 @@
   padding: 1rem;
   text-align: center;
   border-radius: 8px;
+}
+
+.width-50{
+  max-width: 50% ;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
 }
