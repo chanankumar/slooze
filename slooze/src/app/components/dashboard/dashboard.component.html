@@ -33,18 +33,23 @@
 
   <!-- Row 4 -->
   <div class="row two-cols nowrap">
-    <div class="tile width-50"><app-line-charts>
-</app-line-charts>
-</div>
+
+    <div class="tile width-50">
+      <app-line-charts [lineChartData]="constants.TOTAL_EARNING_LINECHART" [ticks]="{display : true}"></app-line-charts>
+    </div>
+
     <div class="tile width-50">
       <app-overview-bar-charts [stack]="false" [setSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
     </div>
+
   </div>
 
   <!-- Row 5 -->
-  <div class="row two-cols">
-    <div class="tile"><app-overview-bar-charts [stack]="true" [setSize]="100" [maxValue]="500" [barChartData]="constants.TOTAL_EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts></div>
-    <div class="tile">Row 5 - Tile 2</div>
+  <div class="row two-cols nowrap">
+    <div class="tile width-50"><app-overview-bar-charts [stack]="true" [setSize]="100" [maxValue]="500" [barChartData]="constants.TOTAL_EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts></div>
+    <div class="tile width-50">      
+      <app-line-charts [lineChartData]="constants.SUBSCRIBER_LINECHART" [ticks]="{display : false}"></app-line-charts>
+    </div>
   </div>
 
   <!-- Row 6 -->
@@ -55,7 +60,9 @@
 
   <!-- Row 7 -->
   <div class="row two-cols">
-    <div class="tile">Row 7 - Left</div>
+    <div class="tile">      
+      <app-line-charts [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
+    </div>
     <div class="tile">Row 7 - Right</div>
   </div>
 

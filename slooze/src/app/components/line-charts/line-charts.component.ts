@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ChartData, ChartOptions } from 'chart.js';
 
 @Component({
@@ -6,37 +6,16 @@ import { ChartData, ChartOptions } from 'chart.js';
   templateUrl: './line-charts.component.html',
   styleUrls: ['./line-charts.component.css']
 })
-export class LineChartsComponent{
+export class LineChartsComponent implements AfterViewInit{
 
-  lineChartData: ChartData<'line'> = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    datasets: [
-      {
-        data: [30, 25, 20, 35, 90, 45, 50, 55, 60, 58, 59, 61],
-        borderColor: '#4ade80',
-        backgroundColor: 'rgba(74,222,128,0.1)',
-        pointBackgroundColor: '#4ade80',
-        pointBorderColor: '#ffffff',
-        pointRadius: 6,
-        pointHoverRadius: 8,
-        tension: 0.4,
-        fill: true,
-      },
-      {
-        data: [45, 40, 35, 30, 30, 35, 38, 37, 39, 41, 44, 46],
-        borderColor: '#cbd5e1',
-        backgroundColor: 'transparent',
-        pointBackgroundColor: '#cbd5e1',
-        pointRadius: 5,
-        tension: 0.4,
-        fill: false,
-      }
-    ]
-  };
+
+  @Input({'required' : true}) ticks!:any;
+  @Input({'required' : true}) lineChartData!:ChartData<'line'>;
+  lineChartOptions!: ChartOptions<'line'>;
 
   backgroundStripPlugin = {
   id: 'customBackgroundStrips',
-  beforeDraw: (chart: { ctx: any; chartArea: any; scales: { x: any; }; }) => {
+  beforeDatasetsDraw: (chart: { ctx: any; chartArea: any; scales: { x: any; }; }) => {
     const ctx = chart.ctx;
     const chartArea = chart.chartArea;
     const xScale = chart.scales.x;
@@ -50,15 +29,23 @@ export class LineChartsComponent{
         const right = xScale.getPixelForTick(i + 1);
         const width = right - left;
 
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(left, chartArea.top, width, chartArea.bottom - chartArea.top);
+      } else {
+                const left = xScale.getPixelForTick(i);
+        const right = xScale.getPixelForTick(i + 1);
+        const width = right - left;
+
+        ctx.fillStyle = '#ffffff';
         ctx.fillRect(left, chartArea.top, width, chartArea.bottom - chartArea.top);
       }
-    }
+    } 
     ctx.restore();
   }
 };
 
-  lineChartOptions: ChartOptions<'line'> = {
+  assignValue() {
+this.lineChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -72,14 +59,12 @@ export class LineChartsComponent{
           drawOnChartArea: true,
           drawBorder: false,
         },
-        ticks: {
-          color: '#94a3b8',
-        }
+        ticks: 
+          this.ticks,
       },
       y: {
         grid: {
-          display: false,
-          drawTicks: false,
+            color: '#94a3b8',
           drawBorder: false,
         },
         ticks: {
@@ -97,6 +82,12 @@ export class LineChartsComponent{
       }
     }
   };
+  }
+
+  ngAfterViewInit(): void {
+    this.assignValue();
+  }
+
 
   lineChartPlugins = [this.backgroundStripPlugin];
 
