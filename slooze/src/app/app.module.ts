@@ -15,6 +15,8 @@ import { OverviewBarChartsComponent } from './components/overview-bar-charts/ove
 import { SalesListComponent } from './components/sales-list/sales-list.component';
 import { GridComponent } from './components/grid/grid.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ProductPageComponent } from './components/product-page/product-page.com
     HomeComponent,
     HeaderComponent,
     SidebarComponent,
+    
+    
         
   ],
   imports: [

@@ -1,0 +1,63 @@
+<div class="container">
+  <!-- Header section -->
+  <div class="header">
+    <h1>{{pageTitle}}</h1>
+    <div class="button-group">
+      <button class="btn discard">Discard Change</button>
+      <button class="btn save" (click)="save()">Save</button>
+    </div>
+  </div>
+
+  <!-- Main form layout -->
+  <div class="form-layout">
+    <!-- Left side -->
+    <div class="left-section">
+      <!-- General Info -->
+      <div class="card">
+        <h2>General Information</h2>
+        <input class="input" placeholder="Product Name" [(ngModel)]="product.product_name"/>
+        <select class="input" [(ngModel)]="product.product_category">
+          <option value="" disabled selected>Select Product Category</option>
+            <option>Beauty</option>
+            <option>Clothing</option>
+            <option>Books</option>
+            <option>Furniture</option>
+            <option>Electronic</option>
+        </select>
+        <textarea class="input" rows="3" placeholder="Description" [(ngModel)]="product.product_description"></textarea>
+        <textarea class="input" rows="2" placeholder="Tag Keyword" [(ngModel)]="product.tags"></textarea>
+      </div>
+
+      <!-- Pricing -->
+      <div class="card">
+        <h2>Pricing</h2>
+        <div class="row-3">
+          <input class="input" placeholder="Price" [(ngModel)]="product.price"/>
+          <input class="input" placeholder="Discount" [(ngModel)]="product.discount"/>
+          <select class="input" [(ngModel)]="product.discount_category" placeholder="Category">
+            <option value="" disabled selected>Select Discount Category</option>
+          <option>Clearance</option>
+          <option>Seasonal</option>
+          <option>Member-only</option>
+          <option>Festival</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="right-section">
+      <!-- Preview Image -->
+      <div class="card image-card">
+        <h3>Previews Product</h3>
+        <div class="drop-zone">Drag and drop here</div>
+      </div>
+
+      <!-- Thumbnail Image -->
+      <div class="card image-card">
+        <h3>Thumbnail Product</h3>
+        <div class="drop-zone">Drag and drop here</div>
+      </div>
+    </div>
+  </div>
+</div>

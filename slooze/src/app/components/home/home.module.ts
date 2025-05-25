@@ -11,6 +11,9 @@ import { LineChartsComponent } from '../line-charts/line-charts.component';
 import { SubscriberFormatPipe } from 'src/app/pipes/subscriber-format.pipe';
 import { GridComponent } from '../grid/grid.component';
 import { ProductPageComponent } from '../product-page/product-page.component';
+import { ProductListComponent } from '../product-list/product-list.component';
+import { AddEditProductComponent } from '../add-edit-product/add-edit-product.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { ProductPageComponent } from '../product-page/product-page.component';
     LineChartsComponent,
     SubscriberFormatPipe,
     GridComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    ProductListComponent,
+    AddEditProductComponent
   ],
   imports: [
     HomeRoutingModule,
     NgChartsModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class HomeModule {}
