@@ -1,4 +1,5 @@
 .auth-container {
+    text-align: center;
     display: flex;
     height: 98vh;
   
@@ -59,4 +60,20 @@
     &:disabled {
       background: #ccc;
     }
+  }
+
+  .signup-button {
+    width: 100%;
+    background-color: white;
+    color : black;
+    border: rgb(189, 189, 189);
+    border-width: 1px;
+    border-style: solid;
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .auth-footer {
+    margin-top: 10px;
   }

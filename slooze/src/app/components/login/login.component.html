@@ -8,12 +8,34 @@
         <input type="password" name="password" [(ngModel)]="password" placeholder="Password" (input)="validateLoginData()" required />
   
         <button type="submit"  [disabled]="disableLoginButton" (click)="login()">Login</button>
+
+        <div class="signup-container">
+          <br>
+          <div class="auth-separator">OR</div>
+
+          <button class="signup-button">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="30px" height="30px"/>
+            <span>Sign in with Google</span>
+          </button>
+
+          <button class="signup-button">
+            <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook" width="30px" height="30px"/>
+            <span>Sign in with Facebook</span>
+          </button>
+
+
+          <p class="auth-footer">
+            Already have an account?
+            <a href="" disabled>Login</a>
+          </p>
+
+        </div>
       </form>
 
     </div>
   
     <div class="auth-image">
-      <img src="" alt="Login Background" />
+      <img src="../../../assets/login.PNG" alt="Login Background" />
     </div>
 </div>
   
