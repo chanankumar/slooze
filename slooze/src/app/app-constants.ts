@@ -135,5 +135,32 @@ export const constants = {
       }
     ]
   },
+  PRODUCT_LIST : [
+    {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+        {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+        {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+        {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    }
+    
+  ]
 
 }

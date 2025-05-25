@@ -58,6 +58,9 @@ export class OverviewBarChartsComponent implements AfterViewInit{
       x: {
         stacked: this.stack,
         grid: { display: false },
+        ticks : {
+          display : this.labelNeeded
+        }
       },
       y: {
         stacked: this.stack,
@@ -65,6 +68,7 @@ export class OverviewBarChartsComponent implements AfterViewInit{
         grid: { display: false },
         ticks: {
           stepSize: 100,
+          display : this.labelNeeded
         },
       },
     },

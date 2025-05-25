@@ -1,0 +1,65 @@
+.product-page {
+  padding: 2rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-btn {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tabs span {
+  margin-right: 2rem;
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+.tabs .active {
+  border-color: black;
+  font-weight: bold;
+}
+.main {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.table-area {
+  flex: 3;
+}
+.sidebar {
+  flex: 1;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+.trend {
+  color: green;
+  font-size: 0.9rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between; /* optional */
+  gap: 1rem; /* spacing between left and right */
+}
+
+.left {
+  flex: 1; /* or a fixed width like width: 60%; */
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+.right {
+  flex: 1; /* or width: 40%; */
+  background-color: #e0e0e0;
+  padding: 1rem;
+}
+

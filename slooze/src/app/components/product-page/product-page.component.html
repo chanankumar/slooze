@@ -1,0 +1,31 @@
+<div class="product-page">
+  <div class="header">
+    <h2>Product</h2>
+    <button class="add-btn">+ Add New Product</button>
+  </div>
+
+  <div class="main">
+    <div class="table-area">
+            <div class="container">
+                <div class="left">
+                    <div class="tabs">
+                        <span [class.active]="true">Published</span>
+                        <span [class.active]="false">Draft</span>
+                    </div>
+                </div>
+            <div class="right">
+                <div class="table-actions">
+                    <button>Filter</button>
+                    <button>Download</button>
+                </div>
+            </div>
+            </div>
+    </div>
+
+  <div class="sidebar">
+      <div class="card">
+        <app-overview-tiles title="Total Views" [amount]="112893" trendTitle="Trend" [trendPercent]="9.75" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+      </div>
+    </div>
+  </div>
+</div>

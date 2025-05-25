@@ -13,6 +13,8 @@ import { OverviewTilesComponent } from './components/overview-tiles/overview-til
 import { NumberFormatPipe } from './pipes/number-format.pipe';
 import { OverviewBarChartsComponent } from './components/overview-bar-charts/overview-bar-charts.component';
 import { SalesListComponent } from './components/sales-list/sales-list.component';
+import { GridComponent } from './components/grid/grid.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { SalesListComponent } from './components/sales-list/sales-list.component
     HomeComponent,
     HeaderComponent,
     SidebarComponent,
-    
+        
   ],
   imports: [
     BrowserModule,

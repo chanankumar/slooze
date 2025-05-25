@@ -9,6 +9,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { SalesListComponent } from '../sales-list/sales-list.component';
 import { LineChartsComponent } from '../line-charts/line-charts.component';
 import { SubscriberFormatPipe } from 'src/app/pipes/subscriber-format.pipe';
+import { GridComponent } from '../grid/grid.component';
+import { ProductPageComponent } from '../product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SubscriberFormatPipe } from 'src/app/pipes/subscriber-format.pipe';
     OverviewBarChartsComponent,
     SalesListComponent,
     LineChartsComponent,
-    SubscriberFormatPipe
+    SubscriberFormatPipe,
+    GridComponent,
+    ProductPageComponent
   ],
   imports: [
     HomeRoutingModule,

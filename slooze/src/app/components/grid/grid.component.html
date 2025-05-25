@@ -1,0 +1,39 @@
+<div class="card">
+  <h2 class="title">{{ title }}</h2>
+  <p class="subtitle">{{ subtitle }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns">{{ col }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <ng-container [ngSwitch]="type">
+
+          <!-- Top Sales Layout -->
+          <ng-container *ngSwitchCase="'top-sales'">
+            <td><img [src]="item.image" alt="Product" width="40" /></td>
+            <td>
+              <div>{{ item.email }}</div>
+              <div class="subtext">{{ item.date }}</div>
+            </td>
+            <td><strong>{{ item.amount }}</strong></td>
+          </ng-container>
+
+          <!-- Payment History Layout -->
+          <ng-container *ngSwitchCase="'payment-history'">
+            <td><span class="status success">✔</span> {{ item.status }}</td>
+            <td>{{ item.email }}</td>
+            <td><strong>{{ item.amount }}</strong></td>
+          </ng-container>
+
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+  <div class="footer-buttons">
+    <button>Previous</button>
+    <button>Next</button>
+  </div>
+</div>

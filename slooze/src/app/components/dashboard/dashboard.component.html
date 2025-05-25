@@ -74,7 +74,13 @@
 
   <!-- Row 9 -->
   <div class="row two-cols">
-    <div class="tile">Row 9 - Tile 1</div>
+    <div class="tile"><app-grid
+      [title]="'Top Sales Product'"
+      [subtitle]="'Manage your payments.'"
+      [columns]="['Product', 'Email', 'Amount']"
+      [data]="constants.PRODUCT_LIST"
+      type="top-sales"
+    ></app-grid></div>
     <div class="tile">Row 9 - Tile 2</div>
   </div>
 

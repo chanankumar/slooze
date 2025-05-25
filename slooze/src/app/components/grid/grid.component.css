@@ -1,0 +1,39 @@
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin: 1rem;
+}
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.subtitle {
+  color: gray;
+  margin-bottom: 1rem;
+}
+table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+}
+.subtext {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.status.success {
+  color: green;
+}
+.footer-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
