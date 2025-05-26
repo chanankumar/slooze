@@ -14,6 +14,7 @@ import { ProductPageComponent } from '../product-page/product-page.component';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { AddEditProductComponent } from '../add-edit-product/add-edit-product.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from '../footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     GridComponent,
     ProductPageComponent,
     ProductListComponent,
-    AddEditProductComponent
+    AddEditProductComponent,
   ],
   imports: [
     HomeRoutingModule,

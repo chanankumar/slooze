@@ -18,6 +18,7 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
 import { Guard } from './services/guard.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { Guard } from './services/guard.service';
     HomeComponent,
     HeaderComponent,
     SidebarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -36,3 +36,7 @@
   padding: 1rem;
   overflow: hidden
 }
+
+app-footer {
+  flex-shrink: 0;
+}
