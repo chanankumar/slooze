@@ -34,7 +34,10 @@ export class SidebarComponent implements OnInit {
         } else if(this.location.path().includes('/addproduct') || this.location.path().includes('/editproduct')) {
           this.productDetailsSelected = true;
           this.isProductSelected = false;
-        }               
+        } else {
+          this.productDetailsSelected = false;
+          this.isProductSelected = false;
+        }
       }
     )
   }
@@ -43,17 +46,14 @@ export class SidebarComponent implements OnInit {
   }
 
   goToProductPage() {
-    this.productDetailsSelected = false;
     this.router.navigate(['/home/product']);
   }
 
   goToAddProductPage() {
-    this.isProductSelected = false;
     this.router.navigate(['/home/addproduct']);
   }
 
-    goToDashboard() {
-    this.isProductSelected = false;
+  goToDashboard() {
     this.router.navigate(['/home/dashboard']);
   }
 }
