@@ -1,16 +1,17 @@
 .auth-container {
     text-align: center;
     display: flex;
-    height: 98vh;
-  
+    height: 100vh;
+    color : var(--foreground-color);
     .auth-form {
       flex: 1;
       padding: 4rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: white;
-  
+      background-color: var(--background-color);
+      overflow: hidden;
+
       h2 {
         font-size: 2rem;
         font-weight: bold;
@@ -64,8 +65,8 @@
 
   .signup-button {
     width: 100%;
-    background-color: white;
-    color : black;
+    background-color: var(--background-color);
+    color : var(--foreground-color);
     border: rgb(189, 189, 189);
     border-width: 1px;
     border-style: solid;
@@ -74,6 +75,30 @@
     }
   }
 
+  .theme-button {
+    padding-left : 10px !important;
+  }
+
   .auth-footer {
     margin-top: 10px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .width-50 {
+    width: 70px;
+    padding-left: 0px;
+    button {
+      padding : 10px;
+    }
+  }
+
+  .label {
+    text-align: start;
+    font-weight: 400;
+    color:var(--foreground-color)
   }

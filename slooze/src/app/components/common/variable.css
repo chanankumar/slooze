@@ -1,4 +1,17 @@
 :root {
   --background-gray: #ebebeb;
-  --white: #ffffff;
+  --background-color: white;
+  --foreground-color: black;
+  --foreground-color-inverted: white;
+  --sidebar-color : rgb(70, 69, 69) !important;
+  --box-shadow : rgba(0, 0, 0, 0.05);
+}
+
+.dark-theme {
+  --background-color : black;
+  --background-gray : black;
+  --foreground-color: white;
+  --foreground-color-inverted: black;
+  --sidebar-color : rgb(142, 141, 141);
+  --box-shadow : rgba(255, 255, 255, 0.158);
 }

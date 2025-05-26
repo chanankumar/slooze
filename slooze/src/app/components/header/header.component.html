@@ -14,10 +14,13 @@
 
   </div>
 
-  <div class="right">
-    <div class="profile">
+  <div class="right d-flex">
+    <button class="theme-button" type="button" (click)="toggleTheme()">Theme</button>
 
-      <img src="../../../assets/profile.png" alt="Profile" class="avatar" />
+    <div class="profile" (click)="logout()">
+
+
+      <img src="../../../assets/profile.png" alt="Profile" class="avatar"/>
 
     </div>
   </div>

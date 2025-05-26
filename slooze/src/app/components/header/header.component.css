@@ -15,7 +15,7 @@
 }
 
 .brand {
-  color: black
+  color: var(--foreground-color)
 }
 
 .center {
@@ -110,7 +110,7 @@
   top: 50%;
   transform: translateY(-50%);
   color: #94a3b8;
-  font-size: 16px;
+  font-size: 20px;
   pointer-events: none;
 }
 
@@ -124,3 +124,12 @@
   cursor: pointer;
 }
 
+.theme-button {
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}

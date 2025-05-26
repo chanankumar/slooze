@@ -92,13 +92,13 @@
 .stats-button {
   margin-right: 10px;
   background-color: white;
-  color : gray;
+  color : var(--sidebar-color);
   border-radius : 5px;
 }
 
 
 .tile-card {
-  background-color: #ffffff;
+  background-color: (--background-gray);
   padding: 1rem;
   border-radius: 1rem;
   font-family: sans-serif;
@@ -136,7 +136,7 @@
 .tile-amount {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #111;
+  color: var(--foreground-color);
   text-align: left;
 }
 
@@ -162,4 +162,8 @@
 
 .subscriber-count{
   text-align: center;
+}
+
+.text-color {
+  color: var(--foreground-color);
 }

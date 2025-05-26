@@ -1,10 +1,17 @@
 <div class="auth-container">
     <div class="auth-form">
       <h2>Welcome To Slooze</h2>
-      <p>Login</p>
+
+      <div class="row">
+        <h5 class="width-50 login-label">Login</h5>
+        <button class="width-50 theme-button" (click)="toggleTheme()">Theme</button>
+      </div>
+
   
       <form>
+        <label class="label">Email</label>
         <input type="email" name="email" [(ngModel)]="email" placeholder="Email" (input)="validateLoginData()" required />
+        <label class="label">Password</label>
         <input type="password" name="password" [(ngModel)]="password" placeholder="Password" (input)="validateLoginData()" required />
   
         <button type="submit"  [disabled]="disableLoginButton" (click)="login()">Login</button>
