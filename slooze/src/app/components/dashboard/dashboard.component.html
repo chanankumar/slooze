@@ -157,13 +157,13 @@
   <!-- Row 7 -->
   <div class="row">
     <div class="tile bg-white flex-1">      
-      <app-line-charts title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
+      <app-line-charts title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_1" [ticks]="{callback : novdecTicks}"></app-line-charts>
     </div>
     <div class="tile bg-white flex-1">
-      <app-line-charts title="Total Sales" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
+      <app-line-charts title="Total Sales" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_2" [ticks]="{callback : novdecTicks}"></app-line-charts>
     </div>
     <div class="tile bg-white flex-1">
-      <app-line-charts title="Total Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
+      <app-line-charts title="Total Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_3" [ticks]="{callback : novdecTicks}"></app-line-charts>
     </div>
   </div>
 
@@ -189,11 +189,11 @@
       </app-grid></div>
     <div class="tile bg-white flex-1">
       <app-grid
-        [title]="'Top Sales Product'"
+        [title]="'Payment History'"
         [subtitle]="'Manage your payments.'"
-        [columns]="['Product', '', 'Amount']"
-        [data]="constants.PRODUCT_LIST"
-        type="top-sales">
+        [columns]="['Success', 'Email', 'Amount']"
+        [data]="constants.PRODUCT_LIST_SUCCESS"
+        type="payment-history">
       </app-grid>
     </div>
   </div>

@@ -161,6 +161,128 @@ export const constants = {
       amount: '$100'
     }
     
-  ]
+  ],
+  PRODUCT_LIST_SUCCESS : [
+    {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+        {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+        {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+        {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+    {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+    {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    },
+    {
+      image: '',
+      email: 'Youremail@email.com',
+      date: '02/10/2024',
+      amount: '$100'
+    }
+  ],
+
+    TOTAL_EARNING_LINECHART_OVERVIEW_1 : {
+    labels: ['Nov 20th', 'Nov 23th', 'Nov 26th', 'Nov 29th', 'Dec 1st', 'Dec 4th', 'Dec 7th', 'Dec 10th', 'Dec 13th', 'Dec 15th', 'Dec 18th', 'Dec 20th'],
+    datasets: [
+      {
+        data: [30, 25, 20, 35, 90, 45, 50, 55, 60, 58, 59, 61],
+        borderColor: '#4ade80',
+        backgroundColor: 'rgba(171, 77, 0, 0.1)',
+        pointBackgroundColor: '#4ade80',
+        pointBorderColor: '#ffffff',
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0.4,
+        fill: false,
+      },
+      {
+        data: [45, 40, 35, 30, 30, 35, 38, 37, 39, 41, 44, 46],
+        borderColor: 'gray',
+        backgroundColor: 'transparent',
+        pointBackgroundColor: '#cbd5e1',
+        pointRadius: 0,
+        tension: 0.4,
+        fill: false,
+      }
+    ]
+  },
+
+    TOTAL_EARNING_LINECHART_OVERVIEW_2 : {
+    labels: ['Nov 20th', 'Nov 23th', 'Nov 26th', 'Nov 29th', 'Dec 1st', 'Dec 4th', 'Dec 7th', 'Dec 10th', 'Dec 13th', 'Dec 15th', 'Dec 18th', 'Dec 20th'],
+    datasets: [
+      {
+        data: [30, 25, 40, 45, 70, 65, 50, 55, 60, 58, 59, 61],
+        borderColor: '#violet',
+        backgroundColor: 'rgba(74,222,128,0.1)',
+        pointBackgroundColor: '#4ade80',
+        pointBorderColor: '#ffffff',
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0.4,
+        fill: false,
+      },
+      {
+        data: [65, 70, 75, 70, 50, 45, 38, 37, 39, 41, 44, 46],
+        borderColor: '#cbd5e1',
+        backgroundColor: 'transparent',
+        pointBackgroundColor: '#cbd5e1',
+        pointRadius: 0,
+        tension: 0.4,
+        fill: false,
+      }
+    ]
+  },
+
+    TOTAL_EARNING_LINECHART_OVERVIEW_3 : {
+    labels: ['Nov 20th', 'Nov 23th', 'Nov 26th', 'Nov 29th', 'Dec 1st', 'Dec 4th', 'Dec 7th', 'Dec 10th', 'Dec 13th', 'Dec 15th', 'Dec 18th', 'Dec 20th'],
+    datasets: [
+      {
+        data: [60, 65, 60, 55, 70, 65, 60, 65, 70, 88, 89, 81],
+        borderColor: '#BA8E23',
+        backgroundColor: 'rgba(74,222,128,0.1)',
+        pointBackgroundColor: '#4ade80',
+        pointBorderColor: '#ffffff',
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0.4,
+        fill: false,
+      },
+      {
+        data: [65, 60, 55, 50, 50, 55, 58, 57, 59, 61, 64, 66],
+        borderColor: '#cbd5e1',
+        backgroundColor: 'transparent',
+        pointBackgroundColor: '#cbd5e1',
+        pointRadius: 0,
+        tension: 0.4,
+        fill: false,
+      }
+    ]
+  },
 
 }
