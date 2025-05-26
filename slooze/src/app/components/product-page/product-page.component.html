@@ -5,8 +5,8 @@
   </div>
 
   <div class="main">
-    <div class="table-area">
-            <div class="container">
+    <div class="table-area bg-white">
+            <div class="container ">
                 <div class="left">
                     <div class="tabs">
                         <span [class.active]="true">Published</span>
@@ -15,8 +15,12 @@
                 </div>
             <div class="right">
                 <div class="table-actions">
-                    <button>Filter</button>
-                    <button>Download</button>
+                        <select class="border rounded m-2 px-2 action-button">
+                          <option>Filter</option>
+                        </select>
+                        <select class="border rounded m-2 px-2 action-button">
+                          <option>Download</option>
+                        </select>
                 </div>
             </div>
             </div>
@@ -26,7 +30,7 @@
 
   <div class="sidebar">
       <div class="card">
-        <app-overview-tiles title="Total Views" [amount]="112893" trendTitle="Trend" [trendPercent]="9.75" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+      <app-line-charts title="Total Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{display : false}"></app-line-charts>
       </div>
     </div>
   </div>

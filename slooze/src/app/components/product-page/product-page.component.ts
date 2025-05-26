@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { constants } from 'src/app/app-constants';
 
 @Component({
   selector: 'app-product-page',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ProductPageComponent {
 
+  constants = constants
+  
 }

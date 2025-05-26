@@ -47,19 +47,30 @@
 }
 .container {
   display: flex;
-  justify-content: space-between; /* optional */
-  gap: 1rem; /* spacing between left and right */
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .left {
-  flex: 1; /* or a fixed width like width: 60%; */
-  background-color: #f0f0f0;
+  flex: 1;
   padding: 1rem;
 }
 
 .right {
-  flex: 1; /* or width: 40%; */
-  background-color: #e0e0e0;
+  flex: 1;
   padding: 1rem;
 }
 
+.bg-white {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.table-actions {
+  justify-content: end;
+  display: flex;
+}
+
+.action-button {
+  margin-right: 10px;
+}
