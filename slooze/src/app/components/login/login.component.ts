@@ -32,8 +32,14 @@ export class LoginComponent {
 
   login() {
     this.authService.signIn(this.email, this.password).then((res) => {
-      if(res === true)
-        this.router.navigate(['/home']);
+      if(res === true){
+        const access = localStorage.getItem('token');
+        if(!access){
+          this.router.navigate(['/home/product'])
+        } else {
+          this.router.navigate(['/home']);
+        }
+      }
     }).catch(err => {
       console.log(err.message)
     });

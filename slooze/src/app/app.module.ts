@@ -17,6 +17,7 @@ import { GridComponent } from './components/grid/grid.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
+import { Guard } from './services/guard.service';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,6 @@ import { AddEditProductComponent } from './components/add-edit-product/add-edit-
     HomeComponent,
     HeaderComponent,
     SidebarComponent,
-    
-    
-        
   ],
   imports: [
     BrowserModule,

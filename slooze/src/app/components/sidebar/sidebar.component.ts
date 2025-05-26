@@ -24,6 +24,8 @@ export class SidebarComponent implements OnInit {
   isProductSelected = false;
   productDetailsSelected = false;
 
+  adminUser = localStorage.getItem('user_admin');
+
   constructor(private router: Router,  private location: Location) {}
 
   ngOnInit() {

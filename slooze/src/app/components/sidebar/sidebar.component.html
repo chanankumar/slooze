@@ -6,7 +6,7 @@
     </div>
     
   </li>
-  <li (click)="goToDashboard()">
+  <li *ngIf="adminUser === 'true'" (click)="goToDashboard()">
     <div class="">
       <i class="fa fa-th"></i>
       Dashboard

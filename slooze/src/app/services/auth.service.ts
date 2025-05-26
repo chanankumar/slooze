@@ -17,6 +17,15 @@ export class AuthService {
     const data:any = await this.supabaseClient.auth.signInWithPassword({ email, password });
     if(data.data.user.aud === "authenticated" && data.data.user.id) {
       localStorage.setItem('user_id', data.data.user.id);
+      if (data.data.user) {
+        const profile_data = await this.supabaseClient
+          .from('profiles')
+          .select('*')
+          .eq('id', data.data.user.id)
+          .single();
+
+          localStorage.setItem('user_admin', profile_data.data.isManager);
+      }
       return true
     }
     return false
