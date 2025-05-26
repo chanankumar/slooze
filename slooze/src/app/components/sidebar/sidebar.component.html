@@ -1,38 +1,69 @@
 <ul class="menu">
-  <li (click)="toggleDropdown('dashboard')">Dashboard</li>
-  <li (click)="toggleDropdown('store')">
-    Store <span>{{ dropdowns.store ? '▲' : '▼' }}</span>
+  <li (click)="goToDashboard()">
+    <div class="">
+      <i class="fa fa-home"></i>
+      Home
+    </div>
+    
+  </li>
+  <li (click)="goToDashboard()">
+    <div class="">
+      <i class="fa fa-th"></i>
+      Dashboard
+    </div>
+  </li>
+  <li (click)="toggleDropdown('store')" class="bg-gray">
+    <div>
+      <i class="fa-solid fa-store"></i>
+      Store
+    </div>
+    <span class="menu-state-icon">{{ dropdowns.store ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.store">
-    <li>Product</li>
-    <li>Add Product</li>
+    <li [ngClass]="{ 'active': isProductSelected, 'inactive': isProductSelected === false }" (click)="goToProductPage()">Product</li>
+    <li [ngClass]="{ 'active': productDetailsSelected, 'inactive': productDetailsSelected === false }" (click)="goToAddProductPage()">Add Product</li>
   </ul>
 
-  <li (click)="toggleDropdown('analytic')">
-    Analytic <span>{{ dropdowns.analytic ? '▲' : '▼' }}</span>
+  <li (click)="toggleDropdown('analytic')" class="bg-gray">
+    <div >
+      <i class="fa-solid fa-chart-simple"></i>
+      Analytics
+    </div>
+    <span class="menu-state-icon">{{ dropdowns.analytic ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.analytic">
     <li>Traffic</li>
     <li>Earning</li>
   </ul>
 
-  <li (click)="toggleDropdown('finances')">
-    Finances <span>{{ dropdowns.finances ? '▲' : '▼' }}</span>
+  <li (click)="toggleDropdown('finances')" class="bg-gray">
+    <div >
+      <i class="fas fa-money-check-alt"></i>
+      Finances
+    </div>
+    <span class="menu-state-icon">{{ dropdowns.finances ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.finances">
     <li>Payment</li>
     <li>Payout</li>
   </ul>
 
-  <li (click)="toggleDropdown('account')">
-    Account Setting <span>{{ dropdowns.account ? '▲' : '▼' }}</span>
+  <li (click)="toggleDropdown('account')" class="bg-gray">
+    <div class="">
+      <i class="fa-solid fa-gear"></i>
+      Account Setting
+    </div>
+    <span class="menu-state-icon">{{ dropdowns.account ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.account">
     <li>My Profile</li>
     <li>Security</li>
   </ul>
 
-  <li (click)="toggleDropdown('help')">
-    Help And Support <span>{{ dropdowns.help ? '▲' : '▼' }}</span>
+  <li class="bg-gray">
+    <div>
+      <i class="fa-solid fa-headset"></i>
+      Help And Support
+    </div>
   </li>
 </ul>
