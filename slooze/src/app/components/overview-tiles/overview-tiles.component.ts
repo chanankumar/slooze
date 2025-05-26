@@ -13,5 +13,6 @@ export class OverviewTilesComponent {
   @Input({required : true}) trendPercent!: number;
   @Input({required : true}) trendPositive!: boolean;
   @Input({required : true}) amountValue!: boolean;
+  @Input() style: boolean = true;
   
 }

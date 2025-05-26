@@ -3,7 +3,6 @@
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  margin: 1rem;
 }
 .title {
   font-weight: bold;
@@ -27,13 +26,18 @@ table {
 .footer-buttons {
   margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content:end;
 }
 button {
   background: #22c55e;
   color: white;
   border: none;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  margin: 0px 10px
+}
+
+tr {
+  border: 0.5px solid rgb(185, 185, 185);
 }

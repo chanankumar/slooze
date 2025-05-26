@@ -1,5 +1,32 @@
+<div class="tile-card" [ngClass]="{ 'overlap': overlapDetails, 'no-overlap': overlapDetails === false }">
+  <div class="tile-header">
+    <span>{{ title }}</span>
+    <button class="icon-button" aria-label="details">
+    <i class="fa-solid fa-square-poll-vertical"></i>
+    </button>
+  </div>
+
+  <div class="tile-amount" *ngIf = "amountValue === true">
+    $ {{ amount | numberFormat}}
+  </div>
+
+  <div class="tile-amount" *ngIf = "amountValue === false">
+    + {{ amount | subscriberFormat}}
+  </div>
+
+  <div class="tile-trend" [class.positive]="trendPositive" [class.negative]="!trendPositive">
+    {{ trendTitle }}
+    <span class="percent"> {{ trendPositive ? '▲' : '▼' }} {{ trendPercent }}%</span>
+  </div>
+
+  <select *ngIf="showOverviewFilter===true" class="border rounded m-2 px-2 width-select">
+    <option>This Week</option>
+  </select>
+
+</div>
+
 <div class="p-4 bg-white rounded-xl shadow-md">
-  <div class="h-64 w-full">
+  <div class="">
     <canvas baseChart
       [data]="lineChartData"
       [options]="lineChartOptions"

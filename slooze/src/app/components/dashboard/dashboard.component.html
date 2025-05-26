@@ -2,89 +2,200 @@
 
   <!-- Row 1 -->
   <div class="row two-cols">
-    <div class="tile">Row 1 - Left</div>
-    <div class="tile">Row 1 - Right</div>
+    <div class="tile header-title">Dashboard</div>
+    <div class="header-button-tile tile">
+      <button class="add-btn header-button">+ Add New Product</button>
+    </div>
   </div>
 
   <!-- Row 2 -->
   <div class="row four-cols">
-    <div class="tile">
+    <div class="overview-tile tile">
       <app-overview-tiles title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true"></app-overview-tiles>
     </div>
-    <div class="tile">
+    <div class="overview-tile tile">
       <app-overview-tiles title="Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
     </div>
-    <div class="tile">
+    <div class="overview-tile tile">
       <app-overview-tiles title="Total Sales" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
     </div>
-    <div class="tile">
+    <div class="overview-tile tile">
       <app-overview-tiles title="Subscription" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
     </div>
   </div>
 
   <!-- Row 3 -->
   <div class="row two-cols">
-    <div class="tile">
+    <div class="tile bg-white">
       <div class="title">Overview</div>
-      <app-overview-bar-charts [stack]="false" [setSize]="constants.OVERVIEW_CHART_STEPSIZE" [maxValue]="constants.OVERVIEW_CHART_MAX_Y" [labelNeeded]="true" [barChartData]="constants.OVERVIEW_CHART_DATA"></app-overview-bar-charts>
+      <app-overview-bar-charts [stack]="false" [stepSize]="constants.OVERVIEW_CHART_STEPSIZE" [maxValue]="constants.OVERVIEW_CHART_MAX_Y" [labelNeeded]="true" [barChartData]="constants.OVERVIEW_CHART_DATA"></app-overview-bar-charts>
     </div>
-    <div class="tile"><app-sales-list></app-sales-list></div>
+    <div class="tile bg-white"><app-sales-list></app-sales-list></div>
   </div>
 
   <!-- Row 4 -->
-  <div class="row two-cols nowrap">
 
-    <div class="tile width-50">
-      <app-line-charts [lineChartData]="constants.TOTAL_EARNING_LINECHART" [ticks]="{display : true}"></app-line-charts>
+  <div class="row stats-filter-section">
+    <div class="tile header-title flex-3">
+      <div class="d-flex text-center">
+      <span class="font-semibold m-2">Stats</span>
+
+      <select class="border rounded m-2 px-2">
+        <option>Years</option>
+      </select>
+
+      <select class="border rounded m-2 px-2">
+        <option>Aug 20th - Dec 4th</option>
+      </select>
+
+      <span class="font-semibold m-2">compared to</span>
+
+      <select class="border rounded m-2 px-2">
+        <option>Previous</option>
+      </select>
+
+      <select class="border rounded m-2 px-2">
+        <option>2024</option>
+      </select>
+
+      </div>
+      
     </div>
 
-    <div class="tile width-50">
-      <app-overview-bar-charts [stack]="false" [setSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
+    <div class="header-button-tile tile flex-1">
+      <button class="add-btn stats-button">+ Add</button>
+      <button class="add-btn stats-button">⚙️ Edit</button>
+    </div>
+  </div>
+
+  <div class="row nowrap">
+
+    <div class="tile flex-3 bg-white">
+      <app-line-charts [showOverviewFilter]="true"  title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [overlapDetails]="true" [lineChartData]="constants.TOTAL_EARNING_LINECHART" [ticks]="{display : true}" ></app-line-charts>
+    </div>
+
+    <div class="tile flex-1 bg-white">
+      <app-overview-tiles title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [style]="false"></app-overview-tiles>
+      <app-overview-bar-charts [stack]="false" [stepSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
     </div>
 
   </div>
 
   <!-- Row 5 -->
-  <div class="row two-cols nowrap">
-    <div class="tile width-50"><app-overview-bar-charts [stack]="true" [setSize]="100" [maxValue]="500" [barChartData]="constants.TOTAL_EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts></div>
-    <div class="tile width-50">      
-      <app-line-charts [lineChartData]="constants.SUBSCRIBER_LINECHART" [ticks]="{display : false}"></app-line-charts>
+  <div class="row nowrap">
+    <div class="tile flex-3 bg-white d-flex">
+      <div class="flex-1">
+              
+        <div class="tile-card">
+        <div class="tile-header">
+          <span>Total Earning</span>
+          <button class="icon-button" aria-label="details">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          </button>
+        </div>
+
+        <div class="tile-amount">
+          $ 112,893.00
+        </div>
+
+        <div class="tile-trend">
+          trendTitle
+          <span class="percent"> ▲ 70.5%</span>
+        </div>
+
+        <select  class="border rounded m-2 px-2 width-select">
+          <option>This Week</option>
+        </select>
+
+      </div>
+
+
+      </div>
+        <div class="flex-3">      
+          <app-overview-bar-charts [stack]="true" [stepSize]="100" [maxValue]="500" [barChartData]="constants.TOTAL_EARNING_CHART_DATA" [labelNeeded]="true"></app-overview-bar-charts>
+        </div>
+      </div>
+    <div class="tile flex-1 bg-white">      
+      <app-line-charts title="Subscription" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [lineChartData]="constants.SUBSCRIBER_LINECHART" [ticks]="{display : false}"></app-line-charts>
     </div>
   </div>
 
   <!-- Row 6 -->
-  <div class="row two-cols">
-    <div class="tile">Row 6 - Tile 1</div>
-    <div class="tile">Row 6 - Tile 2</div>
+  <div class="row stats-filter-section">
+    <div class="tile header-title flex-3">
+      <div class="d-flex text-center">
+      <span class="font-semibold m-2">Stats</span>
+
+      <select class="border rounded m-2 px-2">
+        <option>Years</option>
+      </select>
+
+      <select class="border rounded m-2 px-2">
+        <option>Aug 20th - Dec 4th</option>
+      </select>
+
+      <span class="font-semibold m-2">compared to</span>
+
+      <select class="border rounded m-2 px-2">
+        <option>Previous</option>
+      </select>
+
+      <select class="border rounded m-2 px-2">
+        <option>2024</option>
+      </select>
+
+      </div>
+      
+    </div>
+
+    <div class="header-button-tile tile flex-1">
+      <button class="add-btn stats-button">+ Add</button>
+      <button class="add-btn stats-button">⚙️ Edit</button>
+    </div>
   </div>
 
   <!-- Row 7 -->
-  <div class="row two-cols">
-    <div class="tile">      
-      <app-line-charts [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
+  <div class="row">
+    <div class="tile bg-white flex-1">      
+      <app-line-charts title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
     </div>
-    <div class="tile">Row 7 - Right</div>
+    <div class="tile bg-white flex-1">
+      <app-line-charts title="Total Sales" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
+    </div>
+    <div class="tile bg-white flex-1">
+      <app-line-charts title="Total Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW" [ticks]="{callback : novdecTicks}"></app-line-charts>
+    </div>
   </div>
 
   <!-- Row 8 -->
-  <div class="row two-cols">
-    <div class="tile">Row 8 - Tile 1</div>
-    <div class="tile">Row 8 - Tile 2</div>
-  </div>
+  <div class="row">
+    <div class="tile bg-white flex-1">
+      <h5>Subscription Performers</h5>
+      Follower this year
 
-  <!-- Row 9 -->
-  <div class="row two-cols">
-    <div class="tile"><app-grid
-      [title]="'Top Sales Product'"
-      [subtitle]="'Manage your payments.'"
-      [columns]="['Product', 'Email', 'Amount']"
-      [data]="constants.PRODUCT_LIST"
-      type="top-sales"
-    ></app-grid></div>
-    <div class="tile">Row 9 - Tile 2</div>
-  </div>
+      <h2 class="subscriber-count">+500</h2>
 
-  <!-- Footer -->
-  <footer class="footer">Footer Content</footer>
+      <app-overview-bar-charts [stack]="false" [stepSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
+
+
+    </div>
+    <div class="tile bg-white flex-1">
+      <app-grid
+        [title]="'Top Sales Product'"
+        [subtitle]="'Manage your payments.'"
+        [columns]="['Product', '', 'Amount']"
+        [data]="constants.PRODUCT_LIST"
+        type="top-sales">
+      </app-grid></div>
+    <div class="tile bg-white flex-1">
+      <app-grid
+        [title]="'Top Sales Product'"
+        [subtitle]="'Manage your payments.'"
+        [columns]="['Product', '', 'Amount']"
+        [data]="constants.PRODUCT_LIST"
+        type="top-sales">
+      </app-grid>
+    </div>
+  </div>
 
 </div>

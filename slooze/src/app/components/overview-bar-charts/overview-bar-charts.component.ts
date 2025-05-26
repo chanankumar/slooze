@@ -8,7 +8,7 @@ import { ChartOptions, ChartType, ChartData, Chart  } from 'chart.js';
 })
 export class OverviewBarChartsComponent implements AfterViewInit{
 
-  @Input({required : true}) setSize!:number;
+  @Input({required : true}) stepSize!:number;
   @Input({required : true}) maxValue!:number;
   @Input({required : true}) labelNeeded!:boolean;
   @Input({required : true}) stack!:boolean;
@@ -67,7 +67,7 @@ export class OverviewBarChartsComponent implements AfterViewInit{
         beginAtZero: true,
         grid: { display: false },
         ticks: {
-          stepSize: 100,
+          stepSize: this.stepSize,
           display : this.labelNeeded
         },
       },

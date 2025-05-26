@@ -1,4 +1,4 @@
-<div class="tile-card">
+<div class="tile-card" [ngClass]="{ 'style': style, 'no-style': style === false }">
   <div class="tile-header">
     <span>{{ title }}</span>
     <button class="icon-button" aria-label="details">

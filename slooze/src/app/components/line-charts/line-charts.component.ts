@@ -13,6 +13,16 @@ export class LineChartsComponent implements AfterViewInit{
   @Input({'required' : true}) lineChartData!:ChartData<'line'>;
   lineChartOptions!: ChartOptions<'line'>;
 
+  @Input({required : true}) title!: string;
+  @Input({required : true}) amount!: number;
+  @Input({required : true}) trendTitle!: string;
+  @Input({required : true}) trendPercent!: number;
+  @Input({required : true}) trendPositive!: boolean;
+  @Input({required : true}) amountValue!: boolean;
+  @Input() overlapDetails: boolean = false;
+  @Input() showOverviewFilter: boolean = false;
+  
+
   backgroundStripPlugin = {
   id: 'customBackgroundStrips',
   beforeDatasetsDraw: (chart: { ctx: any; chartArea: any; scales: { x: any; }; }) => {
