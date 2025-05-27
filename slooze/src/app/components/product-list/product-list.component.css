@@ -37,3 +37,7 @@ th, td {
   background: #fca5a5;
   color: white;
 }
+.table-button {
+  display: flex;
+  flex-wrap: nowrap;
+}
