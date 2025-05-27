@@ -1,6 +1,6 @@
 export const constants = {
-    SUPABASE_URL : 'https://xiesjsywmcoknkruuzbg.supabase.co',
-    SUPABASE_ANON_KEY : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhpZXNqc3l3bWNva25rcnV1emJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4NDA2NjMsImV4cCI6MjA2MzQxNjY2M30.MEUyff516z_JgOnvRe8J_-73_nNym6-CnZmpHkWkI_M',
+    SUPABASE_URL : process.env['PROJECT_URL'] ,
+    SUPABASE_ANON_KEY : process.env['ANON_KEY'],
     OVERVIEW_CHART_MAX_Y : 6000,
     OVERVIEW_CHART_STEPSIZE : 1500,
     OVERVIEW_CHART_DATA : {
