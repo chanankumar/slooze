@@ -41,3 +41,23 @@ th, td {
   display: flex;
   flex-wrap: nowrap;
 }
+
+.grouping-controls {
+  margin-bottom : 10px;
+  padding-left : 10px;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.category-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

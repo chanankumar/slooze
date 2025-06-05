@@ -79,3 +79,7 @@
 .main {
   color : var(--foreground-color);
 }
+
+app-product-page {
+  padding-left : 15px;
+}

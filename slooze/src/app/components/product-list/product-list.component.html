@@ -1,34 +1,87 @@
-<div *ngIf="products === null">
-    Loading
+<div *ngIf="products === null">Loading...</div>
+
+<div class="grouping-controls">
+  <label for="groupBy">Group by:</label>
+  <select id="groupBy" [(ngModel)]="groupByCategory" (change)="groupProducts()">
+    <option value="none">None</option>
+    <option value="category">Category</option>
+  </select>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th><input type="checkbox" /></th>
-      <th>Product Name</th>
-      <th>Views ⬍</th>
-      <th>Pricing ⬍</th>
-      <th>Revenue ⬍</th>
-      <th>Manage ⬍</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td><input type="checkbox" /></td>
-      <td>
-        <div class="product-info">
-          <img src="../../../assets/mobile.jpg" alt="Product" />
-          <span>{{ product.product_name }}</span>
-        </div>
-      </td>
-      <td>{{ product.views }}</td>
-      <td>{{ product.price }}</td>
-      <td>${{ product.revenue }}</td>
-      <td class="table-button">
+<!-- IF Group by is CATEGORY: Show Accordion -->
+<ng-container *ngIf="groupByCategory === 'category'">
+  <ng-container *ngFor="let category of objectKeys(groupedProducts)">
+    <div class="category-header">
+      <h3>
+        <button (click)="toggleCategory(category)">
+          {{ categoryVisibility[category] ? '▼' : '▶' }}
+        </button>
+        {{ category }}
+      </h3>
+    </div>
+
+    <table *ngIf="categoryVisibility[category]">
+      <thead>
+        <tr>
+          <th><input type="checkbox" /></th>
+          <th>Product Name</th>
+          <th>Views ⬍</th>
+          <th>Pricing ⬍</th>
+          <th>Revenue ⬍</th>
+          <th>Manage ⬍</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of groupedProducts[category]">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div class="product-info">
+              <img src="../../../assets/mobile.jpg" alt="Product" />
+              <span>{{ product.product_name }}</span>
+            </div>
+          </td>
+          <td>{{ product.views }}</td>
+          <td>{{ product.price }}</td>
+          <td>${{ product.revenue }}</td>
+          <td class="table-button">
+            <button (click)="editProduct(product)">Edit</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="groupByCategory === 'none'">
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" /></th>
+        <th>Product Name</th>
+        <th>Views ⬍</th>
+        <th>Pricing ⬍</th>
+        <th>Revenue ⬍</th>
+        <th>Manage ⬍</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of groupedProducts['All']">
+        <td><input type="checkbox" /></td>
+        <td>
+          <div class="product-info">
+            <img src="../../../assets/mobile.jpg" alt="Product" />
+            <span>{{ product.product_name }}</span>
+          </div>
+        </td>
+        <td>{{ product.views }}</td>
+        <td>{{ product.price }}</td>
+        <td>${{ product.revenue }}</td>
+        <td class="table-button">
         <button class="edit-btn" (click)="editProduct(product)">Edit</button>
         <button class="delete-btn">Delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
