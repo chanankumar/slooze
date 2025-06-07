@@ -1,6 +1,6 @@
 <div class="sales-container">
-  <h2>Recent Sales</h2>
-  <p class="subheading">You made {{ salesCount }} sales this mount</p>
+  <h2>{{"RECENTSALES" | translate}}</h2>
+  <p class="subheading">{{"YOUMADE" | translate}} {{ salesCount }} {{"SALESTHISMOUNT" | translate}}</p>
   <div class="sale-item" *ngFor="let sale of sales">
     <div class="avatar"></div>
     <div class="info">

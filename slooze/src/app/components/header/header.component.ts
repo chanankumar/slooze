@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private translate: TranslateService) {}
 
   logout() {
     localStorage.removeItem('user_admin');
@@ -27,6 +28,12 @@ export class HeaderComponent {
       body.classList.add('dark-theme');
       localStorage.setItem('theme', 'dark');
     }
+  }
+
+  switchLang(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    const language = target.value;
+    this.translate.use(language);
   }
 
 }

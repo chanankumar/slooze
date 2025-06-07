@@ -2,32 +2,32 @@
 
   <!-- Row 1 -->
   <div class="row two-cols">
-    <div class="tile header-title text-color">Dashboard</div>
+    <div class="tile header-title text-color">{{'DASHBOARD' | translate }}</div>
     <div class="header-button-tile tile">
-      <button class="add-btn header-button" (click)="goToAddProduct()">+ Add New Product</button>
+      <button class="add-btn header-button" (click)="goToAddProduct()">+ {{'ADDNEWPRODUCT' | translate}}</button>
     </div>
   </div>
 
   <!-- Row 2 -->
   <div class="row four-cols">
     <div class="overview-tile tile">
-      <app-overview-tiles title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true"></app-overview-tiles>
+      <app-overview-tiles [title]="'TOTALEARNING' | translate " [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true"></app-overview-tiles>
     </div>
     <div class="overview-tile tile">
-      <app-overview-tiles title="Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+      <app-overview-tiles [title]="'VIEWS' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
     </div>
     <div class="overview-tile tile">
-      <app-overview-tiles title="Total Sales" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+      <app-overview-tiles [title]="'TOTALSALES' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
     </div>
     <div class="overview-tile tile">
-      <app-overview-tiles title="Subscription" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
+      <app-overview-tiles [title]="'SUBSCRIPTION' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false"></app-overview-tiles>
     </div>
   </div>
 
   <!-- Row 3 -->
   <div class="row two-cols">
     <div class="tile bg-white">
-      <div class="title">Overview</div>
+      <div class="title">{{'OVERVIEW' | translate}}</div>
       <app-overview-bar-charts [stack]="false" [stepSize]="constants.OVERVIEW_CHART_STEPSIZE" [maxValue]="constants.OVERVIEW_CHART_MAX_Y" [labelNeeded]="true" [barChartData]="constants.OVERVIEW_CHART_DATA"></app-overview-bar-charts>
     </div>
     <div class="tile bg-white"><app-sales-list></app-sales-list></div>
@@ -38,20 +38,20 @@
   <div class="row stats-filter-section">
     <div class="tile header-title flex-3">
       <div class="d-flex text-center">
-      <span class="font-semibold m-2 text-color">Stats</span>
+      <span class="font-semibold m-2 text-color">{{'STATS' | translate}}</span>
 
       <select class="border rounded m-2 px-2">
-        <option>Years</option>
+        <option>{{'YEARS' | translate}}</option>
       </select>
 
       <select class="border rounded m-2 px-2">
-        <option>Aug 20th - Dec 4th</option>
+        <option>{{'DATEFORFILTER' | translate}}</option>
       </select>
 
-      <span class="font-semibold m-2 text-color">compared to</span>
+      <span class="font-semibold m-2 text-color">{{'COMPARED' | translate}}</span>
 
       <select class="border rounded m-2 px-2">
-        <option>Previous</option>
+        <option>{{'PREVIOUS' | translate}}</option>
       </select>
 
       <select class="border rounded m-2 px-2">
@@ -63,19 +63,19 @@
     </div>
 
     <div class="header-button-tile tile flex-1">
-      <button class="add-btn stats-button">+ Add</button>
-      <button class="add-btn stats-button">⚙️ Edit</button>
+      <button class="add-btn stats-button">+ {{"ADD" | translate}}</button>
+      <button class="add-btn stats-button">⚙️ {{"EDIT" | translate}}</button>
     </div>
   </div>
 
   <div class="row nowrap">
 
     <div class="tile flex-3 bg-white">
-      <app-line-charts [showOverviewFilter]="true"  title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [overlapDetails]="true" [lineChartData]="constants.TOTAL_EARNING_LINECHART" [ticks]="{display : true}" ></app-line-charts>
+      <app-line-charts [showOverviewFilter]="true"  [title]="'TOTALEARNING' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [overlapDetails]="true" [lineChartData]="constants.TOTAL_EARNING_LINECHART" [ticks]="{display : true}" ></app-line-charts>
     </div>
 
     <div class="tile flex-1 bg-white">
-      <app-overview-tiles title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [style]="false"></app-overview-tiles>
+      <app-overview-tiles [title]="'TOTALEARNING' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [style]="false"></app-overview-tiles>
       <app-overview-bar-charts [stack]="false" [stepSize]="1000" [maxValue]="6000" [barChartData]="constants.EARNING_CHART_DATA" [labelNeeded]="false"></app-overview-bar-charts>
     </div>
 
@@ -88,7 +88,7 @@
               
         <div class="tile-card">
         <div class="tile-header">
-          <span>Total Earning</span>
+          <span>{{'TOTALEARNING' | translate}}</span>
           <button class="icon-button" aria-label="details">
           <i class="fa-solid fa-square-poll-vertical"></i>
           </button>
@@ -99,12 +99,12 @@
         </div>
 
         <div class="tile-trend">
-          trendTitle
+          {{"TRENDTITLE" | translate}}
           <span class="percent"> ▲ 70.5%</span>
         </div>
 
         <select  class="border rounded m-2 px-2 width-select">
-          <option>This Week</option>
+          <option>{{"THISWEEK" | translate}}</option>
         </select>
 
       </div>
@@ -116,7 +116,7 @@
         </div>
       </div>
     <div class="tile flex-1 bg-white">      
-      <app-line-charts title="Subscription" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [lineChartData]="constants.SUBSCRIBER_LINECHART" [ticks]="{display : false}"></app-line-charts>
+      <app-line-charts [title]="'SUBSCRIPTION' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="true" [lineChartData]="constants.SUBSCRIBER_LINECHART" [ticks]="{display : false}"></app-line-charts>
     </div>
   </div>
 
@@ -124,20 +124,20 @@
   <div class="row stats-filter-section">
     <div class="tile header-title flex-3">
       <div class="d-flex text-center">
-      <span class="font-semibold m-2 text-color">Stats</span>
+      <span class="font-semibold m-2 text-color">{{'STATS' | translate}}</span>
 
       <select class="border rounded m-2 px-2">
-        <option>Years</option>
+        <option>{{'YEARS' | translate}}</option>
       </select>
 
       <select class="border rounded m-2 px-2">
-        <option>Aug 20th - Dec 4th</option>
+        <option>{{'DATEFORFILTER' | translate}}</option>
       </select>
 
-      <span class="font-semibold m-2 text-color">compared to</span>
+      <span class="font-semibold m-2 text-color">{{'COMPARED' | translate}}</span>
 
       <select class="border rounded m-2 px-2">
-        <option>Previous</option>
+        <option>{{'PREVIOUS' | translate}}</option>
       </select>
 
       <select class="border rounded m-2 px-2">
@@ -149,29 +149,29 @@
     </div>
 
     <div class="header-button-tile tile flex-1">
-      <button class="add-btn stats-button">+ Add</button>
-      <button class="add-btn stats-button">⚙️ Edit</button>
+      <button class="add-btn stats-button">+ {{"ADD" | translate}}</button>
+      <button class="add-btn stats-button">⚙️ {{"EDIT" | translate}}</button>
     </div>
   </div>
 
   <!-- Row 7 -->
   <div class="row">
     <div class="tile bg-white flex-1">      
-      <app-line-charts title="Total Earning" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_1" [ticks]="{callback : novdecTicks}"></app-line-charts>
+      <app-line-charts [title]="'TOTALEARNING' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_1" [ticks]="{callback : novdecTicks}"></app-line-charts>
     </div>
     <div class="tile bg-white flex-1">
-      <app-line-charts title="Total Sales" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_2" [ticks]="{callback : novdecTicks}"></app-line-charts>
+      <app-line-charts [title]="'TOTALSALES' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_2" [ticks]="{callback : novdecTicks}"></app-line-charts>
     </div>
     <div class="tile bg-white flex-1">
-      <app-line-charts title="Total Views" [amount]="112893" trendTitle="trend title" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_3" [ticks]="{callback : novdecTicks}"></app-line-charts>
+      <app-line-charts [title]="'TOTALVIEWS' | translate" [amount]="112893" [trendTitle]="'TRENDTITLE' | translate" [trendPercent]="70.5" [trendPositive]="true" [amountValue]="false" [lineChartData]="constants.TOTAL_EARNING_LINECHART_OVERVIEW_3" [ticks]="{callback : novdecTicks}"></app-line-charts>
     </div>
   </div>
 
   <!-- Row 8 -->
   <div class="row">
     <div class="tile bg-white flex-1">
-      <h5>Subscription Performers</h5>
-      Follower this year
+      <h5>{{"SUBSCRIPTIONPERFORMERS" | translate}}</h5>
+      {{"FOLLOWERTHISYEAR" | translate }}
 
       <h2 class="subscriber-count">+500</h2>
 
@@ -181,21 +181,20 @@
     </div>
     <div class="tile bg-white flex-1">
       <app-grid
-        [title]="'Top Sales Product'"
-        [subtitle]="'Manage your payments.'"
-        [columns]="['Product', '', 'Amount']"
+        [title]="'TOPSALESPRODUCT' | translate"
+        [subtitle]="'MANAGEYOURPAYMENTS' | translate" 
+        [columns]="getLanguage() === 'en' ? ['Product', '', 'Amount'] : ['उत्पाद', '', 'राशि']"
         [data]="constants.PRODUCT_LIST"
         type="top-sales">
       </app-grid></div>
     <div class="tile bg-white flex-1">
       <app-grid
-        [title]="'Payment History'"
-        [subtitle]="'Manage your payments.'"
-        [columns]="['Success', 'Email', 'Amount']"
+        [title]="'PAYMENTHISTORY' | translate"
+        [subtitle]="'MANAGEYOURPAYMENTS' | translate"
+        [columns]="getLanguage() === 'en' ?  ['Success', 'Email', 'Amount'] : ['सफलता', 'ईमेल', 'राशि']"
         [data]="constants.PRODUCT_LIST_SUCCESS"
-        type="payment-history">
+        type="payment-history"> 
       </app-grid>
     </div>
   </div>
-
 </div>

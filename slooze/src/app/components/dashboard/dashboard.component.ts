@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { constants } from 'src/app/app-constants';
 
 @Component({
@@ -10,7 +11,7 @@ import { constants } from 'src/app/app-constants';
 export class DashboardComponent {
 
   constants = constants
-  constructor(private router: Router) {}
+  constructor(private router: Router, private translate: TranslateService) {}
   
   novdecTicks(value: any, index: number, ticks: any) {
     const labels = ['Nov 20th', 'Nov 23th', 'Nov 26th', 'Nov 29th', 'Dec 1st', 'Dec 4th', 'Dec 7th', 'Dec 10th', 'Dec 13th', 'Dec 15th', 'Dec 18th', 'Dec 20th'];
@@ -19,5 +20,9 @@ export class DashboardComponent {
 
   goToAddProduct() {
     this.router.navigate(['/home/addproduct']);
+  }
+
+  getLanguage () {
+    return this.translate.currentLang;
   }
 }

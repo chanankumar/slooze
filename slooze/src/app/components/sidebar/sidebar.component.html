@@ -2,68 +2,68 @@
   <li (click)="goToDashboard()">
     <div class="">
       <i class="fa fa-home"></i>
-      Home
+      {{'HOME' | translate}}
     </div>
     
   </li>
   <li *ngIf="adminUser === 'true'" (click)="goToDashboard()">
     <div class="">
       <i class="fa fa-th"></i>
-      Dashboard
+      {{'DASHBOARD' | translate}}
     </div>
   </li>
   <li (click)="toggleDropdown('store')" class="bg-gray">
     <div>
       <i class="fa-solid fa-store"></i>
-      Store
+      {{'STORE' | translate}}
     </div>
     <span class="menu-state-icon">{{ dropdowns.store ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.store">
-    <li [ngClass]="{ 'active': isProductSelected, 'inactive': isProductSelected === false }" (click)="goToProductPage()">Product</li>
-    <li [ngClass]="{ 'active': productDetailsSelected, 'inactive': productDetailsSelected === false }" (click)="goToAddProductPage()">Add Product</li>
+    <li [ngClass]="{ 'active': isProductSelected, 'inactive': isProductSelected === false }" (click)="goToProductPage()">{{'PRODUCT' | translate}}</li>
+    <li [ngClass]="{ 'active': productDetailsSelected, 'inactive': productDetailsSelected === false }" (click)="goToAddProductPage()">{{"ADDPRODUCT" | translate}}</li>
   </ul>
 
   <li (click)="toggleDropdown('analytic')" class="bg-gray">
     <div >
       <i class="fa-solid fa-chart-simple"></i>
-      Analytics
+      {{'ANALYTICS' | translate}}
     </div>
     <span class="menu-state-icon">{{ dropdowns.analytic ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.analytic">
-    <li>Traffic</li>
-    <li>Earning</li>
+    <li>{{'TRAFFIC' | translate}}</li>
+    <li>{{'EARNING' | translate}}</li>
   </ul>
 
   <li (click)="toggleDropdown('finances')" class="bg-gray">
     <div >
       <i class="fas fa-money-check-alt"></i>
-      Finances
+      {{'FINANCES' | translate}}
     </div>
     <span class="menu-state-icon">{{ dropdowns.finances ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.finances">
-    <li>Payment</li>
-    <li>Payout</li>
+    <li>{{'PAYMENT' | translate}}</li>
+    <li>{{'PAYOUT' | translate }}</li>
   </ul>
 
   <li (click)="toggleDropdown('account')" class="bg-gray">
     <div class="">
       <i class="fa-solid fa-gear"></i>
-      Account Setting
+      {{'ACCOUNTSETTING' | translate}}
     </div>
     <span class="menu-state-icon">{{ dropdowns.account ? '▲' : '▼' }}</span>
   </li>
   <ul *ngIf="dropdowns.account">
-    <li>My Profile</li>
-    <li>Security</li>
+    <li>{{'MYPROFILE' | translate}}</li>
+    <li>{{'SECURITY' | translate}}</li>
   </ul>
 
   <li class="bg-gray">
     <div>
       <i class="fa-solid fa-headset"></i>
-      Help And Support
+      {{'HELPANDSUPPORT' | translate}}
     </div>
   </li>
 </ul>

@@ -15,6 +15,10 @@ import { ProductListComponent } from '../product-list/product-list.component';
 import { AddEditProductComponent } from '../add-edit-product/add-edit-product.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../footer/footer.component';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpLoaderFactory } from 'src/app/app.module';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +38,22 @@ import { FooterComponent } from '../footer/footer.component';
     HomeRoutingModule,
     NgChartsModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        }),
   ]
 })
-export class HomeModule {}
+export class HomeModule {
+  constructor(private translate: TranslateService) {
+    translate.addLangs(['en', 'fr']);             // your supported languages
+    translate.setDefaultLang('en');               // default language
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang?.match(/en|fr/) ? browserLang : 'en');  // safely switch
+  }
+}

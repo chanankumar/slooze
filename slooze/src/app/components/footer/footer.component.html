@@ -7,7 +7,7 @@
         <span class="logo-text">Opion</span>
       </div>
       <p class="description">
-        Ease of shopping is our main focus. With powerful search features and customizable filters, you can easily find the products you are looking for.
+        {{ 'FOOTER_DESCRIPTION' | translate }}
       </p>
       <div class="social-iconsd-inline">
         <span><img src="https://www.svgrepo.com/show/506656/facebook.svg" width="30px" height="30px" alt="Facebook" />  </span>
@@ -15,10 +15,10 @@
         <span><img src="https://www.svgrepo.com/show/157006/linkedin.svg" width="30px" height="20px" alt="LinkedIn" />  </span>
       </div>
       <div class="newsletter">
-        <p>Subscribe to Newsletter</p>
+        <p>{{ 'SUBSCRIBE_NEWSLETTER' | translate }}</p>
         <div class="newsletter-input">
           <span class="mail-icon">✉</span>
-          <input type="email" placeholder="Enter Your Email Here" />
+          <input type="email" [placeholder]="'ENTER_EMAIL' | translate" />
         </div>
       </div>
     </div>
@@ -26,27 +26,27 @@
     <!-- Right: Links -->
     <div class="footer-links">
       <div class="link-group">
-        <p class="link-title">Get Started</p>
+        <p class="link-title">{{ 'GETSTARTED' | translate }}</p>
         <ul>
-          <li><div >Service</div></li>
-          <li><div >Contact Us</div></li>
-          <li><div >Affiliate Program</div></li>
-          <li><div >About Us</div></li>
+          <li><div>{{ 'SERVICE' | translate }}</div></li>
+          <li><div>{{ 'CONTACTUS' | translate }}</div></li>
+          <li><div>{{ 'AFFILIATE_PROGRAM' | translate }}</div></li>
+          <li><div>{{ 'ABOUTUS' | translate }}</div></li>
         </ul>
       </div>
       <div class="link-group">
-        <p class="link-title">Get Started</p>
+        <p class="link-title">{{ 'GETSTARTED' | translate }}</p>
         <ul>
-          <li><div >Dashboard</div></li>
-          <li><div >Platform</div></li>
-          <li><div >Workout Library</div></li>
-          <li><div >App Design</div></li>
+          <li><div>{{ 'DASHBOARD' | translate }}</div></li>
+          <li><div>{{ 'PLATFORM' | translate }}</div></li>
+          <li><div>{{ 'WORKOUT_LIBRARY' | translate }}</div></li>
+          <li><div>{{ 'APP_DESIGN' | translate }}</div></li>
         </ul>
       </div>
       <div class="link-group">
-        <p class="link-title">Get Started</p>
+        <p class="link-title">{{ 'GETSTARTED' | translate }}</p>
         <ul>
-          <li><div >About Us</div></li>
+          <li><div>{{ 'ABOUTUS' | translate }}</div></li>
         </ul>
       </div>
     </div>
@@ -56,11 +56,11 @@
   <div class="footer-bottom">
     <span>2024 MaxFit</span>
     <div class="footer-social-links">
-      <div>Twitter</div>
+      <div>{{ 'TWITTER' | translate }}</div>
       <span>–</span>
-      <div>Instagram</div>
+      <div>{{ 'INSTAGRAM' | translate }}</div>
       <span>–</span>
-      <div>Facebook</div>
+      <div>{{ 'FACEBOOK' | translate }}</div>
     </div>
   </div>
 </footer>
