@@ -45,6 +45,11 @@ export class ProductListComponent {
     } else {
       this.groupedProducts = { All: this.products || [] };
     }
+
+    this.categoryVisibility = Object.keys(this.groupedProducts).reduce((visibility: any, category: string) => {
+      visibility[category] = true;
+      return visibility;
+    }, {});
   }
 
   toggleCategory(category: string) {
